@@ -202,7 +202,7 @@ export default function ForumPage(props) {
       <div className="page-header">
         <h1>Forum</h1>
         <p>
-          Anyone can view posts, but only logged in users can create posts or comments.
+          The forum is grouped into clear post cards. Anyone can view posts, but only logged in users can create posts or comments.
         </p>
       </div>
 

@@ -1,6 +1,7 @@
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import ExerciseCard from "../components/ExerciseCard";
+import PageHeader from "../components/PageHeader";
 import exercises from "../data/exercises";
 import { addBookmark, getBookmarks, removeBookmark } from "../data/database";
 
@@ -66,13 +67,11 @@ export default function ExercisesPage(props) {
 
   return (
     <Container className="mt-4">
-      <div className="page-header">
-        <h1>All Exercises</h1>
-
-        <p>
-          Browse calisthenics movements by goal, difficulty, and equipment. More exercise cards will be added later as the library grows.
-        </p>
-      </div>
+      <PageHeader
+        headingId="exercises-heading"
+        title="All Exercises"
+        description="Browse calisthenics movements by goal, difficulty, and equipment. More exercise cards will be added later as the library grows."
+      />
 
       {!props.currentUser && (
         <p className="subtle-text">

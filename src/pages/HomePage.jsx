@@ -1,5 +1,5 @@
-import { Container, Button, Row, Col, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+import FeatureCard from "../components/FeatureCard";
 
 export default function HomePage() {
   return (
@@ -14,48 +14,30 @@ export default function HomePage() {
 
       <Row className="mt-4">
         <Col xs={12} md={4} className="mb-3">
-          <Card className="h-100 content-card feature-card">
-            <Card.Body>
-              <Card.Title as="h2" className="h5">Exercise Library</Card.Title>
-              <Card.Text>
-                Search and filter calisthenics exercises by muscle group, difficulty, and equipment.
-              </Card.Text>
-
-              <Button as={Link} to="/exercises" variant="primary">
-                View Exercises
-              </Button>
-            </Card.Body>
-          </Card>
+          <FeatureCard
+            title="Exercise Library"
+            description="Search and filter calisthenics exercises by muscle group, difficulty, and equipment."
+            link="/exercises"
+            buttonText="View Exercises"
+          />
         </Col>
 
         <Col xs={12} md={4} className="mb-3">
-          <Card className="h-100 content-card feature-card">
-            <Card.Body>
-              <Card.Title as="h2" className="h5">Training Forum</Card.Title>
-              <Card.Text>
-                Ask questions, post updates, upload images, and comment on other users' posts.
-              </Card.Text>
-
-              <Button as={Link} to="/forum" variant="primary">
-                Visit Forum
-              </Button>
-            </Card.Body>
-          </Card>
+          <FeatureCard
+            title="Training Forum"
+            description="Ask questions, post updates, upload images, and comment on other users' posts."
+            link="/forum"
+            buttonText="Visit Forum"
+          />
         </Col>
 
         <Col xs={12} md={4} className="mb-3">
-          <Card className="h-100 content-card feature-card">
-            <Card.Body>
-              <Card.Title as="h2" className="h5">Resources</Card.Title>
-              <Card.Text>
-                View calisthenics resource categories.
-              </Card.Text>
-
-              <Button as={Link} to="/resources" variant="primary">
-                Resources
-              </Button>
-            </Card.Body>
-          </Card>
+          <FeatureCard
+            title="Resources"
+            description="View calisthenics resource categories that can later hold links or videos."
+            link="/resources"
+            buttonText="Resources"
+          />
         </Col>
       </Row>
     </Container>

@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
+import PageHeader from "../components/PageHeader";
 
 export default function ResourcesPage() {
   const creators = [
@@ -6,7 +7,7 @@ export default function ResourcesPage() {
       name: "CHRIS HERIA",
       youtube: "https://www.youtube.com/@CHRISHERIA",
       description:
-        "Chris Heria makes calisthenics and bodyweight training videos. His channel is useful for learning workouts, basic routines, and advanced skill progressions. He often shows exercises that can be done with little equipment."
+        "Chris Heria makes calisthenics and bodyweight training videos. His channel is useful for learning workouts, basic routines, and advanced skill progressions. He often shows exercises that can be done with little equipment, which fits well with a calisthenics training website."
     },
     {
       name: "Frank Medrano",
@@ -18,12 +19,11 @@ export default function ResourcesPage() {
 
   return (
     <Container className="mt-4">
-      <div className="page-header">
-        <h1>Calisthenics Resources</h1>
-        <p>
-          Recommended calisthenics content creators.
-        </p>
-      </div>
+      <PageHeader
+        headingId="resources-page-heading"
+        title="Calisthenics Resources"
+        description="This page is for recommended calisthenics content creators."
+      />
 
       <section className="page-section" aria-labelledby="resources-heading">
         <h2 id="resources-heading" className="h3">
